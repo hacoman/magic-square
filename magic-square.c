@@ -11,7 +11,7 @@ int solved_answer (int *a, int *answer_a, int *kakutei, int *sum, int n,
       if (a[j*n+i] == 0) {
 	if (total) {
 	  for (k=0; k<4; k++) {
-	    int idx;
+	    int idx;		/* search reach */
 	    if ((idx = index[k*n*n+j*n+i]) != -1) {
 	      if (kakutei[idx] == n-1) {
 		printf("index: %d reached\n", idx);
@@ -22,12 +22,12 @@ int solved_answer (int *a, int *answer_a, int *kakutei, int *sum, int n,
 	  }
 	} else {
 	  for (k=0; k<4; k++) {
-	    int idx;
+	    int idx;		/* search reach */
 	    if ((idx = index[k*n*n+j*n+i]) != -1) {
 	      if (kakutei[idx] == n-1) {
 		printf("(%d,%d) index: %d reached\n", i, j, idx);
 		for (int kk=0; kk<n; kk++) {
-		  int idx2;
+		  int idx2;	/* search one step ahead reach */
 		  if ((idx2 = index[kk*n*n+j*n+i]) != -1) {
 		    if (kakutei[idx2] == n-2) {
 		      printf("choimuzu index:%d\n", idx2);
