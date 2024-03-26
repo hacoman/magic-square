@@ -2,11 +2,6 @@
 
 int total=0;
 
-int search_reach (int *a, int *answer_a, int *kakutei, int *sum, int n) {
-  int i,j,k;
-  return 0;
-}
-
 int solved_answer (int *a, int *answer_a, int *kakutei, int *sum, int n,
 		   int *index, int **member) {
   int ans=0;
@@ -15,7 +10,6 @@ int solved_answer (int *a, int *answer_a, int *kakutei, int *sum, int n,
     for (i=0; i<n; i++) {
       if (a[j*n+i] == 0) {
 	if (total) {
-	  search_reach(a, answer_a, kakutei, sum, n);
 	  for (k=0; k<4; k++) {
 	    int idx;
 	    if ((idx = index[k*n*n+j*n+i]) != -1) {
@@ -27,7 +21,6 @@ int solved_answer (int *a, int *answer_a, int *kakutei, int *sum, int n,
 	    }
 	  }
 	} else {
-	  search_reach(a, answer_a, kakutei, sum, n);
 	  for (k=0; k<4; k++) {
 	    int idx;
 	    if ((idx = index[k*n*n+j*n+i]) != -1) {
