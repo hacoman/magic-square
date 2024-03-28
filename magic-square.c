@@ -33,8 +33,7 @@ int solved_answer (int *a, int *answer_a, int *kakutei, int *sum, int n,
 		      printf("choimuzu index:%d\n", idx2);
 		      for (int l=0; l<n; l++) {
 			if (*member[idx2*n+l] == 0 &&
-			    member[idx2*n+l] != &a[j*n+i]
-			    ) {
+			    member[idx2*n+l] != &a[j*n+i]) {
 			  int diff = member[idx2*n+l]-&a[0];
 			  printf("%d %d %d\n", l, diff, sum[idx]-sum[idx2]);
 			  answer_a[diff] = sum[idx]-sum[idx2];
